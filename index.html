@@ -191,7 +191,7 @@ footer h4{color:var(--txt);font-size:14px;margin-bottom:8px}
   <!-- ACTIVE WITH DEADLINES -->
   <section class="block" id="closing">
     <div class="sect-head"><h2>⏰ Closing soon — verified active</h2><span class="sub" id="closingSub"></span></div>
-    <p class="sect-note">Sorted by last date. Every listing below was verified against the official source on <strong>28 Sep 2026</strong>. Click through to the official site to apply — confirm dates and details in the official notification.</p>
+    <p class="sect-note">Sorted by last date. Every listing below was checked on <strong>28 Sep 2026</strong> — each card states its exact source. Click through to the official site to apply — confirm dates and details in the official notification.</p>
     <div class="grid" id="gridClosing"></div>
   </section>
 
@@ -623,7 +623,7 @@ function cardHTML(l){
     (l.sel?'<div class="note">'+l.sel+'</div>':"")+
     '<div class="links"><a class="btn primary" href="'+l.apply+'" target="_blank" rel="noopener">Apply on official site</a>'+
     '<a class="btn ghost" href="'+l.notify+'" target="_blank" rel="noopener">Official notification</a></div>'+
-    (l.verifyNote?'<div class="verif">'+l.verifyNote+'</div>':'<div class="verif"><span class="ok">●</span> Verified against official source · 28 Sep 2026</div>')+
+    (l.verifyNote?'<div class="verif">'+l.verifyNote+'</div>':'<div class="verif"><span class="ok">●</span> '+(l.deadline?'Verified against official source':'Ad presence verified on official directory — details: check official ad')+' · 28 Sep 2026</div>')+
     '</article>';
 }
 
